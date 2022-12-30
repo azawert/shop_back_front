@@ -1,0 +1,11 @@
+const Router = require('express')
+const brandController = require('../controllers/BrandController')
+const router = new Router()
+
+router.post('/',brandController.create)
+router.get('/',brandController.getAll)
+router.get('/:id',brandController.getSingleBrand)
+
+
+
+module.exports = router
